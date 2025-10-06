@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #002e6c; /* Cor azul escuro da Ford */
+  background-color: #002e6c;
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -43,7 +43,7 @@
 }
 
 .btn-login {
-  background-color: #007bff; /* Azul de destaque */
+  background-color: #007bff;
   color: white;
 }
 
@@ -52,6 +52,6 @@
 }
 
 .btn-logout {
-  background-color: #dc3545; /* Vermelho para logout */
+  background-color: #dc3545;
   color: white;
 }

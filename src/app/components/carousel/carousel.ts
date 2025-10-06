@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common'; // <--- Importe o NgFor
-
+import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-carousel',
   standalone: true,
   templateUrl: './carousel.html',
   styleUrls: ['./carousel.css'],
-  imports: [NgFor] // <--- Adicione aqui
+  imports: [NgFor]
 })
-// ...
+
 export class CarouselComponent {
   slides = [
     {
-      image: 'assets/mustang.jpg', // Adicione imagens fictícias ou reais
+      image: 'assets/mustang.jpg',
       caption: 'Novo Mustang GT',
       description: 'Potência e design lendários.',
     },

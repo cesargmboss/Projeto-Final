@@ -1,9 +1,9 @@
 .ford-footer {
-  background-color: #1a1a1a; /* Cor escura para o rodapé */
+  background-color: #1a1a1a;
   color: #cccccc;
   padding: 20px 30px;
   text-align: center;
-  margin-top: auto; /* Garante que fique no final da página */
+  margin-top: auto;
 }
 
 .copyright {

@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms'; // <--- Importe o FormsModule
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  standalone: true, // Garanta que a flag esteja ativa
+  standalone: true,
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
   imports: [
-    FormsModule, // <--- ADICIONE AQUI para habilitar o [(ngModel)]
-    // Outros imports necessários, como NgIf ou CommonModule, se houver
+    FormsModule,
   ]
 })
 export class LoginComponent {
@@ -19,6 +18,6 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   submitLogin() {
-    // ... sua lógica de login
+
   }
 }

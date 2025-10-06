@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router'; // <--- Importe o RouterLink
-import { NgIf } from '@angular/common';       // <--- Importe o NgIf (para resolver *ngIf)
+import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,21 +8,20 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   templateUrl: './header.html',
   styleUrls: ['./header.css'],
+
   imports: [
-    RouterLink, // <--- ADICIONE AQUI
+    RouterLink,
     NgIf,
-    CommonModule  // <--- ADICIONE AQUI (para resolver o erro no *ngIf)
+    CommonModule
   ]
 })
 export class HeaderComponent {
-  // Simulação de estado de login (usada no template com *ngIf)
+
   isLoggedIn: boolean = localStorage.getItem('isLoggedIn') === 'true';
 
   logout() {
     localStorage.removeItem('isLoggedIn');
     this.isLoggedIn = false;
     console.log('Você saiu do sistema.');
-    // Você pode injetar o Router aqui para navegar para a página inicial, se desejar.
-    // Exemplo: this.router.navigate(['/']);
   }
 }
