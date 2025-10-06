@@ -1,23 +1,11 @@
-<header class="ford-header">
-  <div class="logo">
-    <a [routerLink]="['/']">
-      <h1 class="ford-logo">Ford</h1>
-    </a>
-  </div>
-  <nav>
-    <ul>
-      <li><a [routerLink]="['/']">Início</a></li>
-      <li><a [routerLink]="['/modelos']">Modelos</a></li>
-      <li><a [routerLink]="['/servicos']">Serviços</a></li>
-      <li><a [routerLink]="['/dashboard']" *ngIf="isLoggedIn">Dashboard</a></li>
-      <li>
-        <button [routerLink]="['/login']" class="btn-login" *ngIf="!isLoggedIn">
-          Login
-        </button>
-        <button class="btn-logout" *ngIf="isLoggedIn" (click)="logout()">
-          Sair
-        </button>
-      </li>
-    </ul>
-  </nav>
-</header>
+<header>
+        <img src="assets/logo-ford-256.png" alt="Logo Ford">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lancamento.html">Lançamento</a></li>
+                <li><a routerLink="/contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div></div>
+    </header>

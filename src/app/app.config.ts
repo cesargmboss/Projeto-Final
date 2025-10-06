@@ -4,9 +4,16 @@ import { HomeComponent } from './pages/home/home';
 
 const routes: Routes = [
   
-  { path: '', component: HomeComponent, title: 'Ford | Início' },
+  { path: 'home', component: HomeComponent, title: 'Ford | Início' },
   { path: 'modelos', component: HomeComponent, title: 'Ford | Modelos' },
   
+{ 
+    path: 'contato', 
+    
+    loadComponent: () => import('./pages/contato/contato').then(m => m.ContatoComponent),
+    title: 'Página de Contato'
+  },
+
   { 
     path: 'login', 
     
