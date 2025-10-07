@@ -7,5 +7,18 @@
                 <li><a routerLink="/contato">Contato</a></li>
             </ul>
         </nav>
-        <div></div>
-    </header>
+
+        <a 
+    *ngIf="!isLoginPage" 
+    [routerLink]="['/login']" 
+    class="header-button-primary">
+    Login
+</a>
+
+<a 
+    *ngIf="isLoginPage" 
+    [routerLink]="['/home']" 
+    class="header-button-primary">
+    Voltar para Home
+</a>
+</header>

@@ -1,27 +1,28 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { NgIf } from '@angular/common';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { NgIf, CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.html',
   styleUrls: ['./header.css'],
-
   imports: [
     RouterLink,
     NgIf,
     CommonModule
   ]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  public isLoginPage: boolean = false;
 
-  isLoggedIn: boolean = localStorage.getItem('isLoggedIn') === 'true';
+  constructor(private router: Router) {}
 
-  logout() {
-    localStorage.removeItem('isLoggedIn');
-    this.isLoggedIn = false;
-    console.log('Você saiu do sistema.');
+  ngOnInit(): void {
+    this.isLoginPage = this.router.url.includes('/login');
+
+    this.router.events.subscribe(() => {
+        this.isLoginPage = this.router.url.includes('/login');
+    });
   }
 }
