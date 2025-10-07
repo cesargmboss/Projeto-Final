@@ -3,42 +3,61 @@ body {
 }
 
 main {
-    flex: 1;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
-    gap: 50px;
-    flex-wrap: wrap;
-    text-align: center;
     margin-top: 20px;
 }
 
+.conteudo-contato {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
 .formulario {
-    max-width: 400px;
-  }
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    background: #fff;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.formulario h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
 
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
-  }
+}
 
-  form input,
-  form select,
-  form textarea {
+form input,
+form select,
+form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  form textarea {
-    resize: vertical;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: none;
+    font-family: Arial, sans-serif;
     height: 100px;
-  }
-  
-  form button {
+}
+
+form button {
     padding: 10px;
     background-color: #1351d8;
     color: white;
@@ -47,33 +66,58 @@ form {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.5s ease, background-color 0.3s ease;
-  }
-  
-  form button:hover {
+    align-self: flex-start;
+    width: 100px;
+}
+
+form button:hover {
     transform: translateY(-2px);
     color: white;
     background-color: #00274C;
-  }
-  
-  .imagem-formulario {
-    max-width: 400px;
+}
+
+.imagem-formulario {
+    max-width: 450px;
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .formulario textarea{
-    resize: none;
-    font-family: Arial, sans-serif;
-  }
+.imagem-formulario img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 @media(max-width: 768px){
-  body{
+  .conteudo-contato {
     flex-direction: column;
     gap: 20px;
   }
+
   .formulario{
-    width: 100%;
+    width: 90%;
     max-width: 100%;
-    padding: 0
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  form {
+    flex-direction: column;
+  }
+
+  .campos-linha {
+    gap: 15px;
+  }
+
+  form input,
+  form select {
+    flex: 1 1 100%;
+  }
+
+  .imagem-formulario {
+    max-width: 80%;
   }
 }
