@@ -31,19 +31,37 @@ header nav a:hover{
 }
 
 .header-button-primary {
-    background-color: #ffffff;
-    color: #00274C;
-    font-weight: 500;
+    background-color: #1351d8; 
+    color: #ffffff;
+    
+    font-weight: bold;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 4px;
-    transition: background-color 0.2s;
+    
+    border: 2px solid #1351d8; 
+    
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     cursor: pointer;
     display: inline-block;
+    letter-spacing: 0.5px;
 }
 
 .header-button-primary:hover {
+    background-color: #4271d4;
+    border-color: #4271d4;
+    color: white;
+}
+
+.header-button-primary.secondary {
+    background-color: #ffffff;
+    color: #4271d4;
+    border-color: #4271d4;
+}
+
+.header-button-primary.secondary:hover {
     background-color: #e0f2ff;
+    color: #4271d4;
 }
 
 @media (max-width: 768px){

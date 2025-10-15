@@ -20,12 +20,6 @@ const routes: Routes = [
     loadComponent: () => import('./pages/login/login').then(m => m.LoginComponent), 
     title: 'Ford | Login'
   },
-  { 
-    path: 'dashboard', 
-    
-    loadComponent: () => import('./pages/dashboard/dashboard').then(m => m.DashboardComponent),
-    title: 'Ford | Dashboard'
-  },
 
   { path: '**', redirectTo: '' },
 ];

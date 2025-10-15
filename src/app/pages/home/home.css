@@ -1,0 +1,310 @@
+.home-page-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    margin-right: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: #1351d8;
+    color: white;
+    border: 2px solid #1351d8;
+}
+
+.btn-primary:hover {
+    background-color: #00274C;
+    border-color: #00274C;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-cta {
+    background-color: white;
+    color: #00274C;
+    border: 2px solid white;
+    font-size: 1.1em;
+}
+
+.btn-cta:hover {
+    background-color: #e0f2ff;
+    transform: scale(1.05);
+}
+
+.btn-tertiary {
+    background-color: #00274C;
+    color: white;
+    border: 2px solid #00274C;
+    margin-top: 20px;
+}
+
+.btn-tertiary:hover {
+    background-color: #1b357e;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #00274C;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #1351d8;
+}
+
+.hero-banner {
+    height: 80vh;
+    background-image: url('/assets/ford-dealership-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    position: relative;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    color: white;
+    max-width: 600px;
+    z-index: 10;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.destaques-section {
+    padding: 80px 40px;
+    background-color: #f4f7f6;
+}
+
+.carros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-carro {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-carro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carro-imagem {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carro-detalhes {
+    padding: 20px;
+}
+
+.carro-detalhes h3 {
+    color: #00274C;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.carro-detalhes p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-detalhes {
+    color: #1351d8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+    display: block;
+    margin-top: 10px;
+}
+
+.btn-detalhes:hover {
+    color: #00274C;
+}
+
+.inovacao-section {
+    background-color: #00274C;
+    color: white;
+    padding: 80px 40px;
+}
+
+.inovacao-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inovacao-content h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.inovacao-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noticias-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.noticia-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 300px;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.noticia-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.noticia-data {
+    font-size: 0.9em;
+    color: #a0c2f7;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.noticia-card h4 {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.noticia-card a {
+    color: white;
+    text-decoration: none;
+}
+
+.noticia-card a:hover {
+    text-decoration: underline;
+}
+
+.cta-section {
+    background-color: #1351d8;
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.cta-content h3 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.cta-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .destaques-section {
+        padding: 60px 20px;
+    }
+    
+    .inovacao-section {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-banner {
+        height: 60vh;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .carros-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,1 +1,55 @@
-<p>home</p>
+<main class="home-page-container">
+
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Descubra a Nova Era da Ford</h1>
+            <p>Inovação, força e legado em cada quilômetro. Explore nossos lançamentos e a tecnologia que move o futuro.</p>
+            <a routerLink="/lancamento" class="btn btn-primary">Ver Lançamentos</a>
+            <a routerLink="/contato" class="btn btn-secondary">Encontre uma Concessionária</a>
+        </div>
+    </section>
+
+    <section class="destaques-section">
+        <h2 class="section-title">Modelos Selecionados Para Você</h2>
+        
+        <div class="carros-grid">
+            <div class="card-carro" *ngFor="let carro of modelosDestaque">
+                <div class="carro-imagem" [style.background-image]="'url(' + carro.imagemUrl + ')'"></div>
+                <div class="carro-detalhes">
+                    <h3>{{ carro.nome }}</h3>
+                    <p>{{ carro.descricao }}</p>
+                    <a [routerLink]="carro.link" class="btn-detalhes">
+                        Saiba Mais &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="inovacao-section">
+        <div class="inovacao-content">
+            <h2>Compromisso com o Futuro</h2>
+            <p>Na Ford, o futuro é construído hoje. Estamos investindo em veículos elétricos, tecnologia autônoma e produção sustentável.</p>
+            
+            <div class="noticias-box">
+                <div class="noticia-card" *ngFor="let noticia of noticias">
+                    <span class="noticia-data">{{ noticia.data }}</span>
+                    <a [href]="noticia.link" target="_blank">
+                        <h4>{{ noticia.titulo }}</h4>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-tertiary">Leia Mais Notícias da Ford</a>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="cta-content">
+            <h3>Agende seu Test-Drive Hoje!</h3>
+            <p>Experimente a potência e a tecnologia dos veículos Ford. Sua próxima aventura começa aqui.</p>
+            <a routerLink="/contato" class="btn btn-cta">Agendar Agora</a>
+        </div>
+    </section>
+
+</main>
