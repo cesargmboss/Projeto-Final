@@ -1,0 +1,25 @@
+<header>
+    <img src="assets/logo-ford-256.png" alt="Logo Ford">
+    <nav>
+        <ul>
+            <li><a routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lancamento.html">Lançamento</a></li>
+            <li><a routerLink="/contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <a 
+        *ngIf="!isLoginPage" 
+        [routerLink]="['/login']" 
+        class="header-button-primary">
+        Login
+    </a>
+
+    <a 
+        *ngIf="isLoginPage" 
+        [routerLink]="['/home']" 
+        class="header-button-primary">
+        Voltar para Home
+    </a>
+</header>

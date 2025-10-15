@@ -1,0 +1,72 @@
+<main class="dashboard-container">
+    <header class="dashboard-header">
+        <h1>Visão Geral do Desempenho Ford 🚀</h1>
+        <p>Dados atualizados em: {{ '2025/10/14' | date: 'dd/MM/yyyy HH:mm' }}</p>
+    </header>
+
+    <section class="metricas-grid">
+        <div 
+            class="card-metrica" 
+            *ngFor="let metrica of metricas" 
+            [style.border-left-color]="metrica.cor">
+            
+            <div class="icone" [style.background-color]="metrica.cor + '15'">{{ metrica.icone }}</div>
+            <div class="detalhes">
+                <span class="titulo">{{ metrica.titulo }}</span>
+                <span class="valor">{{ metrica.valor }}</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="data-insights">
+        <div class="painel vendas-mensais">
+            <h2>Vendas Mensais (Últimos 6 Meses)</h2>
+            <div class="grafico-barras">
+                <div 
+                    class="barra-container" 
+                    *ngFor="let dado of dadosVendas">
+                    <div 
+                        class="barra" 
+                        [style.height.%]="(dado.vendas / 12500) * 100" 
+                        [title]="dado.mes + ': ' + dado.vendas | number">
+                    </div>
+                    <span class="label-mes">{{ dado.mes }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="painel modelos-vendidos">
+            <h2>Modelos Mais Vendidos (Mês)</h2>
+            <table class="tabela-modelos">
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Qtd.</th>
+                        <th>% Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of modelosMaisVendidos">
+                        <td>{{ item.modelo }}</td>
+                        <td>{{ item.quantidade | number }}</td>
+                        <td>
+                            <div class="barra-progresso-container">
+                                <div 
+                                    class="barra-progresso" 
+                                    [style.width.%]="item.porcentagem">
+                                </div>
+                                <span class="porcentagem-texto">{{ item.porcentagem }}%</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="alerts">
+        <div class="alert-box">
+            <span>🚨</span> **Alerta:** A Ford Ranger superou a meta de vendas em 10% neste mês!
+        </div>
+    </section>
+</main>

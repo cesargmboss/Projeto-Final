@@ -1,0 +1,64 @@
+footer {
+    padding: 10px 30px;
+    background-color: #1b357e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: auto;
+}
+
+footer img{
+    height: 30px;
+}
+.sociais{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sociais img{
+    transition: transform 0.3s ease;
+}
+
+.sociais img:hover{
+    transform: scale(1.1);
+}
+
+.sociais h2 {
+    font-size: 18px;
+    }
+
+.copyright {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 768px){
+
+  footer{
+        flex-direction: row;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .sociais h2{
+        display: none;
+    }
+
+    .sociais img,
+    .logo_footer{
+        height: 25px;
+    }
+
+    .copyright p{
+        font-size: 8px;
+        line-height: 1.4;
+        max-width: 88%;
+        margin: 0 auto;
+    }
+}

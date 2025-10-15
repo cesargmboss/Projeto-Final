@@ -1,0 +1,116 @@
+<div class="contact-section">
+    <div class="contact-container">
+        
+        <div class="contact-form-col">
+            <div class="form-card">
+                <h2 class="title-lg">Fale Conosco</h2>
+                <h3 class="title-md">Sobre Você</h3>
+                
+                <form id="contactForm">
+                    <div class="form-group"><input type="text" id="nome" name="nome" placeholder="NOME*" required class="form-input"></div>
+                    <div class="form-group"><input type="email" id="email" name="email" placeholder="E-MAIL*" required class="form-input"></div>
+                    <div class="form-group"><input type="text" id="cidade" name="cidade" placeholder="CIDADE*" required class="form-input"></div>
+                    <div class="form-group"><input type="tel" id="telefone" name="telefone" placeholder="TELEFONE*" required class="form-input"></div>
+                    
+                    <div class="form-group">
+                        <select id="contato" name="contato" required class="form-input form-select">
+                            <option disabled selected hidden>TIPO DE CONTATO</option>
+                                  <option>Elogio</option>
+                                  <option>Reclamação</option>
+                                  <option>Solicitação</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="MENSAGEM*" required class="form-textarea"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="form-button">Enviar Mensagem</button>
+                    </div>
+                </form>
+                
+                <div class="image-wrapper">
+                    <img src="assets/xls 2.2 diesel.jpg" alt="Caminhonete Vermelha">
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-info-col">
+            <h2 class="title-lg">Informações de Contato</h2>
+            <p class="info-text">Nossa equipe de atendimento ao cliente está disponível para ajudá-lo com qualquer dúvida ou preocupação sobre veículos e serviços Ford.</p>
+            
+            <div class="info-item">
+                <div class="info-details">
+                    <h3 class="title-md">Atendimento ao Cliente</h3>
+                    <p>Segunda a Sexta: 8:00 - 20:00 (BRT)</p>
+                    <p>Sábado: 9:00 - 18:00 (BRT)</p>
+                    <p class="info-link">0800 703 3673</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-details">
+                    <h3 class="title-md">Sede Corporativa</h3>
+                    <address>
+                        Ford Motor Company Brasil<br>
+                        Avenida Dr. Cardoso de Melo, 1336<br>
+                        São Paulo, SP<br>
+                        Brasil
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="faq-section">
+    <div class="faq-container">
+        <h2 class="faq-title">Perguntas Frequentes</h2>
+        
+        <div class="faq-item">
+            <button 
+                class="faq-button" 
+                (click)="toggleAnswer(0)" 
+                [attr.aria-expanded]="isExpanded[0]">
+                <h3 class="faq-question">Como posso agendar um Test Drive?</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div 
+                class="faq-answer" 
+                [class.active]="isExpanded[0]">
+                <p>Você pode agendar um test drive diretamente pelo nosso site, selecionando o veículo de seu interesse e clicando no botão "Agendar Test Drive". Alternativamente, entre em contato com seu distribuidor Ford local.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button 
+                class="faq-button" 
+                (click)="toggleAnswer(1)" 
+                [attr.aria-expanded]="isExpanded[1]">
+                <h3 class="faq-question">Quais opções de financiamento a Ford oferece?</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div 
+                class="faq-answer" 
+                [class.active]="isExpanded[1]">
+                <p>A Ford Credit oferece diversas opções de financiamento. Para saber mais, visite nossa página de financiamento ou converse com um revendedor sobre as ofertas e planos disponíveis.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button 
+                class="faq-button" 
+                (click)="toggleAnswer(2)" 
+                [attr.aria-expanded]="isExpanded[2]">
+                <h3 class="faq-question">Como agendar a manutenção do meu veículo Ford?</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div 
+                class="faq-answer" 
+                [class.active]="isExpanded[2]">
+                <p>Você pode agendar serviços online através do aplicativo FordPass ou entrando em contato diretamente com a concessionária Ford de sua preferência. Muitos revendedores também oferecem agendamento online em seus sites.</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,215 @@
+/* Cores da Ford para referência: 
+   Azul Escuro/Marinho: #00274C 
+   Azul Primário: #1351d8
+*/
+
+.dashboard-container {
+    padding: 20px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6; /* Fundo leve para destaque */
+    min-height: calc(100vh - 120px); /* Ajuste para preencher a tela */
+}
+
+/* --- Header do Dashboard --- */
+.dashboard-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.dashboard-header h1 {
+    color: #00274C;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* --- Métricas (Cards) --- */
+.metricas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card-metrica {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    border-left: 5px solid; /* A cor será definida pelo Angular */
+    transition: transform 0.2s;
+}
+
+.card-metrica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.card-metrica .icone {
+    font-size: 28px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.card-metrica .detalhes {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-metrica .titulo {
+    font-size: 14px;
+    color: #6c757d;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.card-metrica .valor {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00274C;
+    margin-top: 5px;
+}
+
+/* --- Seção de Insights (Gráficos/Tabelas) --- */
+.data-insights {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Gráfico maior que a tabela */
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.painel {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.painel h2 {
+    color: #00274C;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Estilização do Gráfico de Barras Simulado */
+.grafico-barras {
+    display: flex;
+    align-items: flex-end;
+    height: 250px;
+    gap: 15px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.barra-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.barra {
+    width: 80%;
+    background-color: #1351d8;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease;
+    min-height: 5px; /* Para barras com valor zero ou muito baixo */
+    cursor: pointer;
+}
+
+.barra:hover {
+    background-color: #00274C;
+}
+
+.label-mes {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* Estilização da Tabela */
+.tabela-modelos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-modelos th, .tabela-modelos td {
+    padding: 10px 0;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.tabela-modelos th {
+    color: #00274C;
+    font-weight: bold;
+}
+
+.tabela-modelos td:first-child {
+    font-weight: 500;
+}
+
+/* Barra de Progresso dentro da Tabela */
+.barra-progresso-container {
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.barra-progresso {
+    background-color: #1351d8;
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.porcentagem-texto {
+    position: absolute;
+    right: 5px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Alertas --- */
+.alerts {
+    margin-bottom: 20px;
+}
+
+.alert-box {
+    background-color: #fff3cd; /* Cor de alerta suave */
+    color: #856404;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ffeeba;
+    font-size: 16px;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+    .dashboard-container {
+        padding: 20px;
+    }
+
+    .data-insights {
+        grid-template-columns: 1fr; /* Coluna única em telas menores */
+    }
+}
