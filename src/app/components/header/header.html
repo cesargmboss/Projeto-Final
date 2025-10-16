@@ -7,18 +7,19 @@
             <li><a routerLink="/contato">Contato</a></li>
         </ul>
     </nav>
-
     <a 
-        *ngIf="!isLoginPage" 
-        [routerLink]="['/login']" 
-        class="header-button-primary">
-        Login
-    </a>
-
-    <a 
-        *ngIf="isLoginPage" 
-        [routerLink]="['/home']" 
-        class="header-button-primary">
-        Voltar para Home
+        (click)="handleAuthClick()" 
+        class="header-button-primary"
+        role="button">
+        
+        <ng-container *ngIf="isLoginPage">
+            Voltar para Home
+        </ng-container>
+        <ng-container *ngIf="!isLoginPage && isLoggedIn">
+            Sair
+        </ng-container>
+        <ng-container *ngIf="!isLoginPage && !isLoggedIn">
+            Login
+        </ng-container>
     </a>
 </header>

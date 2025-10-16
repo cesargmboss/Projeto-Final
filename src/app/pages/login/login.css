@@ -157,6 +157,11 @@
     background-color: #2563eb;
 }
 
+.submit-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
 .separator-block {
     position: relative;
     margin-top: 24px;
@@ -234,4 +239,22 @@
 
 .signup-link:hover {
     color: #1d4ed8;
+}
+
+.error-message {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #fca5a5;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.validation-error {
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 4px;
 }
