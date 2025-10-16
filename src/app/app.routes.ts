@@ -1,8 +1,25 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home';
-import { ContatoComponent } from './pages/contato/contato';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'contato', component: ContatoComponent }
+  { 
+    path: 'home', 
+    loadComponent: () => import('./pages/home/home') 
+        .then(m => m.HomeComponent)
+  },
+  { 
+    path: 'contato', 
+    loadComponent: () => import('./pages/contato/contato') 
+        .then(m => m.ContatoComponent)
+  },
+  { 
+    path: 'lancamento', 
+    loadComponent: () => import('./pages/lancamento/lancamento')
+        .then(m => m.LancamentoComponent)
+  },
+  { 
+    path: 'login',
+    loadComponent: () => import('./pages/login/login')
+        .then(m => m.LoginComponent)
+  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];

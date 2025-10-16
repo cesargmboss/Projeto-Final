@@ -1,0 +1,81 @@
+<main class="lancamento-page-container">
+    <header class="lancamento-header">
+        <h1>Lançamentos Ford: O Futuro Chegou.</h1>
+        <p>Conheça os veículos mais recentes que combinam a força do legado Ford com a inovação de amanhã.</p>
+    </header>
+
+    <section class="trailer-box-section">
+        <div class="trailer-content">
+            <h2>Destaque: Trailer Oficial</h2>
+            <div class="trailer-video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/vehzhG_RtuU?si=CrkOtB5ALvP-kV6R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+            <p>Assista ao trailer completo do novo lançamento Mustang Dark Horse.</p>
+        </div>
+    </section>
+
+    <section class="carros-recentes-section">
+        <h2>Novidades no Showroom (5 Modelos)</h2>
+        <div class="carrossel-container">
+            <div class="carrossel-seta esquerda" (click)="scrollCarrossel('left')">&lt;</div> 
+            <div class="carrossel-itens carrossel-loop">
+                <div class="card-lancamento" *ngFor="let carro of carrosRecentes">
+                    <div class="card-img" [style.background-image]="'url(' + carro.imagemUrl + ')'"></div>
+                    <div class="card-info">
+                        <h3>{{ carro.nome }}</h3>
+                        <p>{{ carro.subtitulo }}</p>
+                        <a [routerLink]="carro.linkDetalhes" class="btn-detalhes-lancamento">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carrossel-seta direita" (click)="scrollCarrossel('right')">&gt;</div>
+        </div>
+    </section>
+
+    <section class="comparacao-section">
+        <h2>Inovação vs Legado: {{ comparacaoModelos[0].titulo }} vs. {{ comparacaoModelos[1].titulo }}</h2>
+        
+        <div class="comparacao-painel">
+            <div class="seletores">
+                <button 
+                    (click)="alternarComparacao(0)" 
+                    [class.ativo]="comparacaoAtiva === 0"
+                    class="btn-comparacao-seletor">
+                    Recente ({{ comparacaoModelos[0].titulo }})
+                </button>
+                <button 
+                    (click)="alternarComparacao(1)" 
+                    [class.ativo]="comparacaoAtiva === 1"
+                    class="btn-comparacao-seletor">
+                    Clássico ({{ comparacaoModelos[1].titulo }})
+                </button>
+            </div>
+            
+            <div class="comparacao-visu">
+                <div class="comparacao-imagem" [style.background-image]="'url(' + comparacaoModelos[comparacaoAtiva].imagemUrl + ')'"></div>
+                
+                <div class="comparacao-detalhes">
+                    <h3>Características Chave</h3>
+                    
+                    <div class="detalhe-item">
+                        <span class="detalhe-titulo">Potência (CV/hp):</span>
+                        <span class="detalhe-valor">{{ comparacaoModelos[comparacaoAtiva].dados.potencia }}</span>
+                    </div>
+                    
+                    <div class="detalhe-item">
+                        <span class="detalhe-titulo">Consumo Médio:</span>
+                        <span class="detalhe-valor">{{ comparacaoModelos[comparacaoAtiva].dados.consumo }}</span>
+                    </div>
+
+                    <div class="detalhe-item">
+                        <span class="detalhe-titulo">Segurança (Classificação):</span>
+                        <span class="detalhe-valor">{{ comparacaoModelos[comparacaoAtiva].dados.seguranca }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

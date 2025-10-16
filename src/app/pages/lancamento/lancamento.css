@@ -1,0 +1,287 @@
+.lancamento-page-container {
+    padding: 30px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.lancamento-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.lancamento-header h1 {
+    color: #00274C;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.lancamento-header p {
+    color: #6c757d;
+}
+
+h2 {
+    color: #00274C;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* --- 1. TRAILER BOX --- */
+.trailer-box-section {
+    background-color: #f0f4f7;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.trailer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.trailer-video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+    overflow: hidden;
+}
+
+.trailer-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* --- 2. CARROSSEL DE CARROS RECENTES --- */
+.carros-recentes-section {
+    padding: 30px 0;
+    margin-bottom: 50px;
+}
+
+.carrossel-container {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    position: relative;
+    padding: 0 30px; 
+}
+
+.carrossel-itens {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    /* ESSENCIAL: Impede a rolagem do navegador e a barra de rolagem */
+    overflow-x: hidden; 
+    scroll-behavior: auto;
+}
+
+.carrossel-itens::-webkit-scrollbar {
+    display: none; 
+}
+
+.card-lancamento {
+    min-width: 300px; 
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* ESSENCIAL: Adiciona transição para suavizar a entrada/saída dos cards ao reordenar o array */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out; 
+}
+
+.card-lancamento:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    color: #1351d8;
+    margin-top: 0;
+    font-size: 1.4em;
+    text-align: left;
+}
+
+.card-info p {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.btn-detalhes-lancamento {
+    display: block;
+    text-align: center;
+    padding: 8px 15px;
+    background-color: #00274C;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-detalhes-lancamento:hover {
+    background-color: #1351d8;
+}
+
+.carrossel-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5em;
+    line-height: 1;
+    transition: background-color 0.2s;
+}
+
+.carrossel-seta:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.esquerda {
+    left: 0;
+}
+
+.direita {
+    right: 0;
+}
+
+/* --- 3. COMPARAÇÃO INTERATIVA --- */
+.comparacao-section {
+    padding: 50px 0;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+}
+
+.comparacao-painel {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.seletores {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #eee;
+}
+
+.btn-comparacao-seletor {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #6c757d;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.btn-comparacao-seletor:hover {
+    color: #1351d8;
+}
+
+.btn-comparacao-seletor.ativo {
+    color: #00274C;
+    border-bottom: 3px solid #1351d8;
+    background-color: #f0f4f7;
+}
+
+.comparacao-visu {
+    display: flex;
+}
+
+.comparacao-imagem {
+    flex: 1;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+.comparacao-detalhes {
+    flex: 1;
+    padding: 30px;
+}
+
+.comparacao-detalhes h3 {
+    text-align: left;
+    color: #1351d8;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.detalhe-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.detalhe-titulo {
+    font-weight: bold;
+    color: #00274C;
+}
+
+.detalhe-valor {
+    color: #555;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .lancamento-page-container {
+        padding: 20px;
+    }
+    
+    .comparacao-visu {
+        flex-direction: column; 
+    }
+
+    .comparacao-imagem {
+        min-height: 250px;
+    }
+    
+    .btn-comparacao-seletor {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .carrossel-container {
+        padding: 0;
+    }
+
+    .carrossel-seta {
+        top: 30%; 
+        padding: 8px 12px;
+    }
+    
+    .carrossel-itens {
+        overflow-x: hidden; 
+    }
+}
