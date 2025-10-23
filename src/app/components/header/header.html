@@ -2,11 +2,15 @@
     <img src="assets/logo-ford-256.png" alt="Logo Ford">
     <nav>
         <ul>
-            <li><a routerLink="/home">Home</a></li>
-            <li><a routerLink="/lancamento">Lançamentos</a></li>
-            <li><a routerLink="/contato">Contato</a></li>
+            <li><a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+            <li *ngIf="isLoggedIn">
+                <a routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a>
+            </li>
+            <li><a routerLink="/lancamento" routerLinkActive="active-link">Lançamentos</a></li>
+            <li><a routerLink="/contato" routerLinkActive="active-link">Contato</a></li>
         </ul>
     </nav>
+    
     <a 
         (click)="handleAuthClick()" 
         class="header-button-primary"

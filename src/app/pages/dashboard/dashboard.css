@@ -1,0 +1,135 @@
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    color: #00274C; /* Cor Ford Azul Escuro */
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    color: #6B7280;
+    font-size: 18px;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Coluna do perfil mais larga, ações mais estreita */
+    gap: 30px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #1351d8; /* Cor Primária Ford Azul */
+}
+
+.card h2 {
+    color: #1351d8;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.profile-card p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #374151;
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.status-active {
+    background-color: #d1fae5; /* Verde claro */
+    color: #065f46; /* Verde escuro */
+}
+
+.quick-actions-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-actions-card li {
+    margin-bottom: 10px;
+}
+
+.action-link {
+    display: block;
+    text-decoration: none;
+    color: #1351d8;
+    background-color: #eff6ff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.action-link:hover {
+    background-color: #dbeafe;
+}
+
+.stats-card {
+    grid-column: 1 / span 2; /* Ocupa as duas colunas */
+}
+
+.stats-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    flex-grow: 1;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+    color: #00274C;
+    line-height: 1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 16px;
+    color: #6B7280;
+    margin-top: 5px;
+}
+
+/* Responsividade básica */
+@media (max-width: 900px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+    .stats-card {
+        grid-column: 1 / 1;
+    }
+}
+@media (max-width: 600px) {
+    .stats-grid {
+        flex-direction: column;
+    }
+}

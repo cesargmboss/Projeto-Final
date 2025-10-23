@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, RouterLink, NavigationEnd } from '@angular/router';
+import { Router, RouterLink, NavigationEnd, RouterLinkActive } from '@angular/router';
 import { NgIf, CommonModule } from '@angular/common';
 import { Subscription, filter } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
@@ -11,6 +11,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./header.css'],
   imports: [
     RouterLink,
+    RouterLinkActive,
     NgIf,
     CommonModule
   ]
